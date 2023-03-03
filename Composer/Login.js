@@ -19,21 +19,15 @@ export default function Login(){
   const Login=()=>{
     let test=users.find(u=>u.username===user.username&&u.password===user.password)
     if(test!==undefined){
-      if(test.username==='Admin' && test.password==='Admin')
+      if(test.username===user.username && test.password===user.password)
       {
-        navigate(`/Session/${1}`)
-      }
-      else{
-          // let test=users.find(u=>u.username===user.username&&u.password===user.password)
-
-          navigate(`/Session/${test.id}`)
+        navigate(`/Session/${test.id}`)
         }
     }
   }
 
   return (
     <div>
-    {/* {userr.length===0?true:<Session user={userr}/>} */}
       <center>
       <h1>Login</h1>
       <table>

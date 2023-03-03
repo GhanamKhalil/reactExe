@@ -5,7 +5,7 @@ export default function reducer(state=initialisState,action) {
 
     switch (action.type) {
         case 'Add':
-                state=[...state,{...action.personne,id:state.length+1}]
+                state=[...state,{...action.personne,id:state[state.length-1].id+1}]
                 return state
         case 'delete':
             state=state.filter(u=>u.id!==parseInt(action.id))
