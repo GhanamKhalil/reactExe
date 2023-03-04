@@ -10,12 +10,14 @@ export default function User({usr,Supprimer}) {
             <td>{usr.genre}</td>
             <td>{usr.pay}</td>
             <td>
+            {usr.id!==1&&<>
                 <Link to={`/Modifier/${usr.id}`}>
                     <input type={'button'} value={'Modifier'} />
                 </Link> 
                 <button type='button' onClick={Supprimer} value={`${usr.id}`}>
                     Supprimer
                 </button>
+                </>}
             </td>
     </tr>
   )

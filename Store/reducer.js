@@ -1,7 +1,7 @@
 
 const initialisState=[{id:1,username:'Admin',email:'',Age:'',genre:'',pay:'Maroc',password:'admin'}]
 
-export default function reducer(state=initialisState,action) {
+export default function reducer(state=initialisState,action){
 
     switch (action.type) {
         case 'Add':
@@ -17,5 +17,5 @@ export default function reducer(state=initialisState,action) {
         default:
             return state;
     }
-    
-}
+
+}   

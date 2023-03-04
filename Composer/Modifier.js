@@ -42,15 +42,15 @@ export default function Modifier(){
                 <td><input  type={'number'} onChange={handleonchange} value={user.Age}    name={'Age'} /></td>
             </tr>
             <tr>
-                <td><input  type={'radio'} onChange={handleonchange}     name={'genre'} value={'femme'} />Femme</td>
-                <td><input  type={'radio'} onChange={handleonchange}     name={'genre'} value={'homme'} />Homme</td>
+                <td><input  type={'radio'} onChange={handleonchange}  checked={user.genre==='homme'?true:false} name={'genre'} value={'homme'} />Homme</td>
+                <td><input  type={'radio'} onChange={handleonchange}   checked={user.genre==='femme'?true:false}  name={'genre'} value={'femme'} />Femme</td>
             </tr>
             <tr>
                 <td>Pays de residence</td>
                 <td>
                 <select name='pay'  onChange={handleonchange}>
-                    <option value={'Maroc'}>Maroc</option>
-                    <option value={'France'}>France</option>
+                    <option value={'Maroc'}  selected={user.pay==='Maroc'&&true} >Maroc</option>
+                    <option value={'France'} selected={user.pay==='France'&&true} >France</option>
                 </select>
                 </td>
             </tr>

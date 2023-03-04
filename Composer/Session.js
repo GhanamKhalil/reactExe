@@ -37,7 +37,7 @@ export default function Session() {
         </tr>
        </thead>
        <tbody>
-       {users.map(u=><User key={u.id} usr={u} Supprimer={handleSupprimer}/>)}
+       {users.map((u,i)=><User key={u.id} usr={u} Supprimer={handleSupprimer}/>)}
        </tbody>
        </table>
     }
